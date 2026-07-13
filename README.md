@@ -192,7 +192,25 @@ Rows not applicable to a method are classified `not_run` / `context_only`, never
 
 ## Results
 
-See [RESULTS.md](RESULTS.md) for the full compiler-validated run.
+See [RESULTS.md](RESULTS.md) for the full run.
+
+### Results status
+
+The committed result artifacts (`results_rows.json`, 768 rows) were produced by the v1 `run_lab.py` runner (commit `d433f03`):
+
+- **run_pass:** 74
+- **compile_pass:** 68
+- **timeout_context:** 53 (subprocess exceeded 20-sec timeout – primarily JSON-heavy cases)
+- **context_only:** 35
+- **not_run:** 538
+- **test_pass:** 0
+- **expected_parse_error:** 0 – the 4 JSON error cases all timed out before producing parse error output
+- **api_changed:** 0
+- **compile_error_unexpected:** 0
+
+The repository HEAD includes v2 runner improvements (stricter classification evidence, context_only cases skip execution entirely, probe methods actually run `zig version`/`zig env`, etc.) plus 3 strengthened case files. A full v2 validation run was not completed.
+
+This is a **substantial compiler-backed draft with good HN documentation and partial real Zig results** – NOT a completed, consistently classified, fresh-clone-verified JSON error-diagnostics lab with full parse-error observations. See [VERIFY.md](VERIFY.md) for details.
 
 ---
 
