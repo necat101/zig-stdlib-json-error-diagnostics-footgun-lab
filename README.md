@@ -148,13 +148,13 @@ The lab does not claim Zig's error model is good or bad, does not design a repla
 **Testing (2 cases):**
 `std_testing_expect_error_marker`, `std_testing_expected_failure_marker`
 
-**std.json (15 cases):**
+**std.json (16 cases):**
 `std_json_namespace_probe_marker`, `std_json_parse_valid_object_marker`, `std_json_missing_required_field_marker`, `std_json_wrong_field_type_marker`, `std_json_unknown_field_default_marker`, `std_json_unknown_field_reject_marker`, `std_json_malformed_syntax_marker`, `std_json_trailing_tokens_marker`, `std_json_unexpected_token_marker`, `std_json_scanner_exists_marker`, `std_json_scanner_diagnostics_exists_marker`, `std_json_scanner_location_context_marker`, `std_json_parse_from_slice_api_marker`, `std_json_parse_from_token_source_api_marker`, `std_json_parsed_deinit_marker`, `std_json_parsed_value_lifetime_marker`
 
 **std.zon (3 cases):**
 `std_zon_namespace_probe_marker`, `std_zon_parse_api_marker`, `std_zon_diagnostics_probe_marker`
 
-**Context / guard cases (5 cases):**
+**Context / guard cases (4 cases):**
 `debugger_breakpoint_context_not_run_marker`, `no_network_no_external_input_marker`, `no_global_error_design_claim_marker`, `production_diagnostics_policy_not_tested_marker`
 
 …plus version/environment probes.
