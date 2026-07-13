@@ -176,7 +176,7 @@ for method in methods:
 
         t0 = time.perf_counter()
         try:
-            p = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
+            p = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
             elapsed = (time.perf_counter()-t0)*1000
             stdout = p.stdout
             stderr = p.stderr
