@@ -7,7 +7,7 @@ pub fn main() !void {
     defer _ = gpa.deinit();
     const alloc = gpa.allocator();
     const input = "{\"name\":\"diagnostic_case\",\"count\":2,\"x\":1}";
-    const opts = .{ .ignore_unknown_fields = false };
+    const opts: std.json.ParseOptions = .{ .ignore_unknown_fields = false };
     const parsed = std.json.parseFromSlice(DemoConfig, alloc, input, opts) catch |e| {
         std.debug.print("json_unknown_reject err={s}\n", .{@errorName(e)}); return;
     };
